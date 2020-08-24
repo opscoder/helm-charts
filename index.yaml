@@ -3,7 +3,7 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-08-24T11:12:11.175083-07:00"
+    created: "2020-08-24T11:20:39.680176-07:00"
     description: A Helm chart for Kubernetes
     digest: b5235dafa82d73c4fc1ffa86a2cc9fa9459728e903901ded63d7bd3514e249a4
     name: helm-chart-test
@@ -11,4 +11,34 @@ entries:
     urls:
     - https://opscoder.github.io/helm-charts/helm-chart-test-0.1.0.tgz
     version: 0.1.0
-generated: "2020-08-24T11:12:11.173784-07:00"
+  prometheus:
+  - apiVersion: v1
+    appVersion: 2.20.1
+    created: "2020-08-24T11:20:39.687858-07:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: cec0446d9edbd9af06e35c710b7367cdfef72a283a970debb7f0cdfff4598420
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    urls:
+    - https://opscoder.github.io/helm-charts/prometheus-11.12.0.tgz
+    version: 11.12.0
+generated: "2020-08-24T11:20:39.674921-07:00"
